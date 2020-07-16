@@ -8,12 +8,15 @@
 
 import UIKit
 
+struct TrackModel {
+    var trackName: String
+    var artistName: String
+}
+
+
 class SearchViewController: UITableViewController {
     
-    struct TrackModel {
-        var trackName: String
-        var artistName: String
-    }
+    let searchController = UISearchController(searchResultsController: nil)
     
     let tracks = [TrackModel(trackName: "TNT", artistName: "AC/DC"), TrackModel(trackName: "Yesterday", artistName: "Beatles")]
     
@@ -22,7 +25,15 @@ class SearchViewController: UITableViewController {
         
         view.backgroundColor = .white
         
+        setupSearchBar()
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+    }
+    
+    private func setupSearchBar() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,5 +47,12 @@ class SearchViewController: UITableViewController {
         cell.textLabel?.numberOfLines = 2
         cell.imageView?.image = #imageLiteral(resourceName: "cover_domo_2")
         return cell
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
     }
 }
