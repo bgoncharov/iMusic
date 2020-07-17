@@ -14,12 +14,15 @@ protocol SearchDisplayLogic: class {
 
 class SearchViewController: UIViewController, SearchDisplayLogic {
     
-    let searchController = UISearchController(searchResultsController: nil)
-    
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic)?
     
     @IBOutlet weak var table: UITableView!
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    var searchViewModel = SearchViewModel.init(cells: [])
+    
+    private var timer: Timer?
     
     
     // MARK: Setup
@@ -53,6 +56,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     private func setupSearchBar() {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
     }
     
@@ -66,8 +70,10 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
             
         case .some:
             print("viewController .some")
-        case .displayTracks:
+        case .displayTracks(let searchViewModel):
             print("viewController .displayTracks")
+            self.searchViewModel = searchViewModel
+            self.table.reloadData()
         }
     }
     
@@ -77,20 +83,28 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return searchViewModel.cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        cell.textLabel?.text = "indexPath: \(indexPath)"
+        
+        let cellViewModel = searchViewModel.cells[indexPath.row]
+        cell.textLabel?.text = "\(cellViewModel.trackName)\n\(cellViewModel.artistName)"
+        cell.imageView?.image = #imageLiteral(resourceName: "cover_domo_2")
+        cell.textLabel?.numberOfLines = 2
         return cell
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
         
-        interactor?.makeRequest(request: Search.Model.Request.RequestType.some)
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            print(searchText)
+            
+            self.interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks(searchTerm: searchText))
+        })
     }
 }
