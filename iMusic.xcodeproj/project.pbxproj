@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		A16DC74824BFB8FA0071451C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16DC74624BFB8FA0071451C /* LaunchScreen.storyboard */; };
 		A16DC75224BFBB330071451C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC75124BFBB330071451C /* MainTabBarController.swift */; };
 		A16DC75424BFC11F0071451C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC75324BFC11F0071451C /* SearchViewController.swift */; };
+		A1A113BB24C1323B008C7D79 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A113BA24C1323B008C7D79 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A16DC74924BFB8FA0071451C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16DC75124BFBB330071451C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A16DC75324BFC11F0071451C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A1A113BA24C1323B008C7D79 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				95CF10EE9C5BA786CEBDB4C0 /* Pods-iMusic.debug.xcconfig */,
 				4BDB6D9F1AC1BC582BB0F4F5 /* Pods-iMusic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,6 +83,7 @@
 				A16DC73F24BFB8F80071451C /* ViewController.swift */,
 				A16DC75124BFBB330071451C /* MainTabBarController.swift */,
 				A16DC75324BFC11F0071451C /* SearchViewController.swift */,
+				A1A113BA24C1323B008C7D79 /* SearchResponse.swift */,
 				A16DC74124BFB8F80071451C /* Main.storyboard */,
 				A16DC74424BFB8FA0071451C /* Assets.xcassets */,
 				A16DC74624BFB8FA0071451C /* LaunchScreen.storyboard */,
@@ -215,6 +217,7 @@
 			files = (
 				A16DC75424BFC11F0071451C /* SearchViewController.swift in Sources */,
 				A16DC74024BFB8F80071451C /* ViewController.swift in Sources */,
+				A1A113BB24C1323B008C7D79 /* SearchResponse.swift in Sources */,
 				A16DC73C24BFB8F80071451C /* AppDelegate.swift in Sources */,
 				A16DC75224BFBB330071451C /* MainTabBarController.swift in Sources */,
 				A16DC73E24BFB8F80071451C /* SceneDelegate.swift in Sources */,
