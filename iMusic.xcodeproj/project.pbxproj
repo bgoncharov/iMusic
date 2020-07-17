@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A5E6B26E6AD98F0F173DCA8 /* Pods_iMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C7A1AE4A1E1E15DC943522 /* Pods_iMusic.framework */; };
+		A16603E124C223A5000F82C7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16603E024C223A5000F82C7 /* NetworkService.swift */; };
 		A16DC73C24BFB8F80071451C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73B24BFB8F80071451C /* AppDelegate.swift */; };
 		A16DC73E24BFB8F80071451C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73D24BFB8F80071451C /* SceneDelegate.swift */; };
 		A16DC74024BFB8F80071451C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73F24BFB8F80071451C /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		4BDB6D9F1AC1BC582BB0F4F5 /* Pods-iMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.release.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.release.xcconfig"; sourceTree = "<group>"; };
 		93C7A1AE4A1E1E15DC943522 /* Pods_iMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CF10EE9C5BA786CEBDB4C0 /* Pods-iMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.debug.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		A16603E024C223A5000F82C7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A16DC73824BFB8F80071451C /* iMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16DC73B24BFB8F80071451C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16DC73D24BFB8F80071451C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				A16DC73D24BFB8F80071451C /* SceneDelegate.swift */,
 				A16DC73F24BFB8F80071451C /* ViewController.swift */,
 				A16DC75124BFBB330071451C /* MainTabBarController.swift */,
+				A16603E024C223A5000F82C7 /* NetworkService.swift */,
 				A16DC75324BFC11F0071451C /* SearchViewController.swift */,
 				A1A113BA24C1323B008C7D79 /* SearchResponse.swift */,
 				A16DC74124BFB8F80071451C /* Main.storyboard */,
@@ -221,6 +224,7 @@
 				A16DC73C24BFB8F80071451C /* AppDelegate.swift in Sources */,
 				A16DC75224BFBB330071451C /* MainTabBarController.swift in Sources */,
 				A16DC73E24BFB8F80071451C /* SceneDelegate.swift in Sources */,
+				A16603E124C223A5000F82C7 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
