@@ -97,6 +97,7 @@
 		A16603F124C22A20000F82C7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A166040A24C299EB000F82C7 /* Models */,
 				A16603E024C223A5000F82C7 /* NetworkService.swift */,
 			);
 			path = Services;
@@ -117,6 +118,14 @@
 				A166040824C293FB000F82C7 /* TrackCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A166040A24C299EB000F82C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1A113BA24C1323B008C7D79 /* SearchResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A16DC72F24BFB8F80071451C = {
@@ -147,7 +156,6 @@
 				A16603E224C2297E000F82C7 /* Search */,
 				A16DC75324BFC11F0071451C /* SearchMusicViewController.swift */,
 				A166040424C23643000F82C7 /* Helpers */,
-				A1A113BA24C1323B008C7D79 /* SearchResponse.swift */,
 				A16DC73F24BFB8F80071451C /* ViewController.swift */,
 				A16DC74124BFB8F80071451C /* Main.storyboard */,
 				A16DC74424BFB8FA0071451C /* Assets.xcassets */,
