@@ -17,6 +17,8 @@
 		A16603FE24C22AB7000F82C7 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16603F724C22AB7000F82C7 /* SearchInteractor.swift */; };
 		A166040124C23222000F82C7 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A166040024C23222000F82C7 /* SearchViewController.storyboard */; };
 		A166040324C2363D000F82C7 /* UIViewController + Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166040224C2363D000F82C7 /* UIViewController + Stroryboard.swift */; };
+		A166040724C293CF000F82C7 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A166040624C293CF000F82C7 /* TrackCell.xib */; };
+		A166040924C293FB000F82C7 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166040824C293FB000F82C7 /* TrackCell.swift */; };
 		A16DC73C24BFB8F80071451C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73B24BFB8F80071451C /* AppDelegate.swift */; };
 		A16DC73E24BFB8F80071451C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73D24BFB8F80071451C /* SceneDelegate.swift */; };
 		A16DC74024BFB8F80071451C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73F24BFB8F80071451C /* ViewController.swift */; };
@@ -41,6 +43,8 @@
 		A16603F724C22AB7000F82C7 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		A166040024C23222000F82C7 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		A166040224C2363D000F82C7 /* UIViewController + Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Stroryboard.swift"; sourceTree = "<group>"; };
+		A166040624C293CF000F82C7 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		A166040824C293FB000F82C7 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		A16DC73824BFB8F80071451C /* iMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16DC73B24BFB8F80071451C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16DC73D24BFB8F80071451C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		A16603E224C2297E000F82C7 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				A166040524C293A8000F82C7 /* Cell */,
 				A166040024C23222000F82C7 /* SearchViewController.storyboard */,
 				A16603F624C22AB7000F82C7 /* SearchViewController.swift */,
 				A16603F724C22AB7000F82C7 /* SearchInteractor.swift */,
@@ -103,6 +108,15 @@
 				A166040224C2363D000F82C7 /* UIViewController + Stroryboard.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A166040524C293A8000F82C7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A166040624C293CF000F82C7 /* TrackCell.xib */,
+				A166040824C293FB000F82C7 /* TrackCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A16DC72F24BFB8F80071451C = {
@@ -212,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16DC74824BFB8FA0071451C /* LaunchScreen.storyboard in Resources */,
+				A166040724C293CF000F82C7 /* TrackCell.xib in Resources */,
 				A16DC74524BFB8FA0071451C /* Assets.xcassets in Resources */,
 				A166040124C23222000F82C7 /* SearchViewController.storyboard in Resources */,
 				A16DC74324BFB8F80071451C /* Main.storyboard in Resources */,
@@ -272,6 +287,7 @@
 				A1A113BB24C1323B008C7D79 /* SearchResponse.swift in Sources */,
 				A16603FE24C22AB7000F82C7 /* SearchInteractor.swift in Sources */,
 				A16DC73C24BFB8F80071451C /* AppDelegate.swift in Sources */,
+				A166040924C293FB000F82C7 /* TrackCell.swift in Sources */,
 				A16DC75224BFBB330071451C /* MainTabBarController.swift in Sources */,
 				A166040324C2363D000F82C7 /* UIViewController + Stroryboard.swift in Sources */,
 				A16603FA24C22AB7000F82C7 /* SearchWorker.swift in Sources */,
