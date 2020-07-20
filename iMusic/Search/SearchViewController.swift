@@ -117,6 +117,15 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 84
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellViewModel = searchViewModel.cells[indexPath.row]
+        print(cellViewModel.trackName)
+        
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let trackDetailsView = Bundle.main.loadNibNamed("TrackDetailView", owner: self, options: nil)?.first as! TrackDetailView
+        window?.addSubview(trackDetailsView)
+    }
 }
 
 // MARK: - UISearchBarDelegate

@@ -29,6 +29,8 @@
 		A16DC75424BFC11F0071451C /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC75324BFC11F0071451C /* SearchMusicViewController.swift */; };
 		A1A113BB24C1323B008C7D79 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A113BA24C1323B008C7D79 /* SearchResponse.swift */; };
 		A1F2674E24C4EC7000D53BD2 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2674D24C4EC7000D53BD2 /* FooterView.swift */; };
+		A1F2675124C535E800D53BD2 /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F2675024C535E800D53BD2 /* TrackDetailView.xib */; };
+		A1F2675324C535FC00D53BD2 /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2675224C535FC00D53BD2 /* TrackDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		A16DC75324BFC11F0071451C /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
 		A1A113BA24C1323B008C7D79 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		A1F2674D24C4EC7000D53BD2 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		A1F2675024C535E800D53BD2 /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
+		A1F2675224C535FC00D53BD2 /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		A16603E224C2297E000F82C7 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				A1F2674F24C535D200D53BD2 /* TrackDetailView */,
 				A1F2674C24C4EC5500D53BD2 /* FooterView */,
 				A166040524C293A8000F82C7 /* Cell */,
 				A166040024C23222000F82C7 /* SearchViewController.storyboard */,
@@ -176,6 +181,15 @@
 			path = FooterView;
 			sourceTree = "<group>";
 		};
+		A1F2674F24C535D200D53BD2 /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				A1F2675024C535E800D53BD2 /* TrackDetailView.xib */,
+				A1F2675224C535FC00D53BD2 /* TrackDetailView.swift */,
+			);
+			path = TrackDetailView;
+			sourceTree = "<group>";
+		};
 		F30F17BDF788E72BBBFB949E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16DC74824BFB8FA0071451C /* LaunchScreen.storyboard in Resources */,
+				A1F2675124C535E800D53BD2 /* TrackDetailView.xib in Resources */,
 				A166040724C293CF000F82C7 /* TrackCell.xib in Resources */,
 				A16DC74524BFB8FA0071451C /* Assets.xcassets in Resources */,
 				A166040124C23222000F82C7 /* SearchViewController.storyboard in Resources */,
@@ -316,6 +331,7 @@
 				A16603FC24C22AB7000F82C7 /* SearchModels.swift in Sources */,
 				A16DC73E24BFB8F80071451C /* SceneDelegate.swift in Sources */,
 				A16603F924C22AB7000F82C7 /* SearchPresenter.swift in Sources */,
+				A1F2675324C535FC00D53BD2 /* TrackDetailView.swift in Sources */,
 				A16603E124C223A5000F82C7 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
