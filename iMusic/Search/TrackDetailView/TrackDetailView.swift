@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TrackDetailView: UIView {
     
@@ -24,10 +25,23 @@ class TrackDetailView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundColor = .blue
+        //backgroundColor = .blue
+    }
+    
+    func set(viewModel: SearchViewModel.Cell) {
+        trackTitleLabel.text = viewModel.trackName
+        authorTitleLabel.text = viewModel.artistName
+        
+        let string600 = viewModel.iconUrlString?.replacingOccurrences(of: "100x100", with: "600x600")
+        guard let url = URL(string: string600 ?? "") else { return }
+        trackImageView.sd_setImage(with: url, completed: nil)
+        //print(string600)
+        
     }
     
     @IBAction func dragDownButtonTapped(_ sender: Any) {
+        
+        self.removeFromSuperview()
     }
     
     @IBAction func handleCurrentTimerSlider(_ sender: Any) {
