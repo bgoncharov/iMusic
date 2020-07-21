@@ -19,6 +19,7 @@
 		A166040324C2363D000F82C7 /* UIViewController + Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166040224C2363D000F82C7 /* UIViewController + Stroryboard.swift */; };
 		A166040724C293CF000F82C7 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A166040624C293CF000F82C7 /* TrackCell.xib */; };
 		A166040924C293FB000F82C7 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166040824C293FB000F82C7 /* TrackCell.swift */; };
+		A16BC1BD24C68FF200989E63 /* CMTime + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16BC1BC24C68FF200989E63 /* CMTime + Extension.swift */; };
 		A16DC73C24BFB8F80071451C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73B24BFB8F80071451C /* AppDelegate.swift */; };
 		A16DC73E24BFB8F80071451C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73D24BFB8F80071451C /* SceneDelegate.swift */; };
 		A16DC74024BFB8F80071451C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DC73F24BFB8F80071451C /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		A166040224C2363D000F82C7 /* UIViewController + Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Stroryboard.swift"; sourceTree = "<group>"; };
 		A166040624C293CF000F82C7 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		A166040824C293FB000F82C7 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		A16BC1BC24C68FF200989E63 /* CMTime + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime + Extension.swift"; sourceTree = "<group>"; };
 		A16DC73824BFB8F80071451C /* iMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16DC73B24BFB8F80071451C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16DC73D24BFB8F80071451C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				A166040224C2363D000F82C7 /* UIViewController + Stroryboard.swift */,
+				A16BC1BC24C68FF200989E63 /* CMTime + Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				A16603FE24C22AB7000F82C7 /* SearchInteractor.swift in Sources */,
 				A16DC73C24BFB8F80071451C /* AppDelegate.swift in Sources */,
 				A1F2674E24C4EC7000D53BD2 /* FooterView.swift in Sources */,
+				A16BC1BD24C68FF200989E63 /* CMTime + Extension.swift in Sources */,
 				A166040924C293FB000F82C7 /* TrackCell.swift in Sources */,
 				A16DC75224BFBB330071451C /* MainTabBarController.swift in Sources */,
 				A166040324C2363D000F82C7 /* UIViewController + Stroryboard.swift in Sources */,
