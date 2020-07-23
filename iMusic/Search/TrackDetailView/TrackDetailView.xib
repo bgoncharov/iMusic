@@ -13,6 +13,68 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vd-tN-zlo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                    <subviews>
+                        <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzP-TE-tAL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="bM3-GJ-3nJ"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xYt-Bw-JoK">
+                            <rect key="frame" x="8" y="8" width="398" height="48"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover_domo_2" translatesAutoresizingMaskIntoConstraints="NO" id="pvp-vR-6GB">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="rYK-JW-wwB"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2C-oL-DaQ">
+                                    <rect key="frame" x="64" y="0.0" width="214" height="48"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u87-1W-boG">
+                                    <rect key="frame" x="294" y="0.0" width="44" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="IUY-Zd-hFY"/>
+                                    </constraints>
+                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <state key="normal" image="pause"/>
+                                    <connections>
+                                        <action selector="playPauseAction:" destination="KRL-X0-4C2" eventType="touchUpInside" id="C56-jo-Vgi"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmW-g4-or3">
+                                    <rect key="frame" x="354" y="0.0" width="44" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="VPR-jy-3m7"/>
+                                    </constraints>
+                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <state key="normal" image="Right"/>
+                                    <connections>
+                                        <action selector="nextTrack:" destination="KRL-X0-4C2" eventType="touchUpInside" id="3aM-Ra-Gjd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="GzP-TE-tAL" firstAttribute="top" secondItem="2vd-tN-zlo" secondAttribute="top" id="69b-jm-KKS"/>
+                        <constraint firstAttribute="trailing" secondItem="GzP-TE-tAL" secondAttribute="trailing" id="BLn-c4-gXs"/>
+                        <constraint firstItem="GzP-TE-tAL" firstAttribute="leading" secondItem="2vd-tN-zlo" secondAttribute="leading" id="BaW-lf-VPK"/>
+                        <constraint firstItem="xYt-Bw-JoK" firstAttribute="leading" secondItem="2vd-tN-zlo" secondAttribute="leading" constant="8" id="FKT-40-5yJ"/>
+                        <constraint firstAttribute="trailing" secondItem="xYt-Bw-JoK" secondAttribute="trailing" constant="8" id="FfA-jJ-5SQ"/>
+                        <constraint firstItem="xYt-Bw-JoK" firstAttribute="top" secondItem="2vd-tN-zlo" secondAttribute="top" constant="8" id="HUn-Te-GoX"/>
+                        <constraint firstAttribute="bottom" secondItem="xYt-Bw-JoK" secondAttribute="bottom" constant="8" id="ODZ-rE-LSC"/>
+                        <constraint firstAttribute="height" constant="64" id="QHZ-Iu-L4X"/>
+                    </constraints>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" id="ZZr-bc-Dcz">
                     <rect key="frame" x="30" y="54" width="354" height="788"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -137,12 +199,23 @@
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="2vd-tN-zlo" firstAttribute="top" secondItem="oCd-sF-Eim" secondAttribute="top" id="1RS-fX-0TP"/>
+                <constraint firstItem="2vd-tN-zlo" firstAttribute="leading" secondItem="oCd-sF-Eim" secondAttribute="leading" id="3WV-wa-5ZM"/>
+                <constraint firstItem="oCd-sF-Eim" firstAttribute="trailing" secondItem="2vd-tN-zlo" secondAttribute="trailing" id="RBD-cE-Iif"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="oCd-sF-Eim"/>
             <connections>
                 <outlet property="authorTitleLabel" destination="pfJ-je-y6D" id="JgS-fT-DL8"/>
                 <outlet property="currentTimeLabel" destination="lVv-X5-LGz" id="Q1S-Uu-P26"/>
                 <outlet property="currentTimeSlider" destination="tOw-ei-Hi8" id="wH5-R8-Uwh"/>
                 <outlet property="durationTimeLabel" destination="bEX-8M-bab" id="k8P-F8-p2U"/>
+                <outlet property="maximizedStackView" destination="ZZr-bc-Dcz" id="8u5-fx-dPw"/>
+                <outlet property="miniGoForwardButton" destination="dmW-g4-or3" id="4uS-nu-T6h"/>
+                <outlet property="miniPlayPauseButton" destination="u87-1W-boG" id="jcM-zF-cPx"/>
+                <outlet property="miniTrackImageView" destination="pvp-vR-6GB" id="6R5-0Y-pUg"/>
+                <outlet property="miniTrackTitleLabel" destination="O2C-oL-DaQ" id="t7R-Lw-5Wo"/>
+                <outlet property="miniTrackView" destination="2vd-tN-zlo" id="zkv-kp-7CW"/>
                 <outlet property="playPauseButton" destination="IN3-X3-qtf" id="uzZ-GK-KEV"/>
                 <outlet property="trackImageView" destination="9UC-01-LB8" id="RPk-Pg-cUV"/>
                 <outlet property="trackTitleLabel" destination="xTl-EX-nGE" id="oIa-fs-37h"/>
@@ -157,6 +230,7 @@
         <image name="IconMax" width="17" height="17"/>
         <image name="Left" width="34" height="20"/>
         <image name="Right" width="34" height="20"/>
+        <image name="cover_domo_2" width="85.333335876464844" height="85.333335876464844"/>
         <image name="pause" width="57" height="57"/>
     </resources>
 </document>
