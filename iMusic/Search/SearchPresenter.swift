@@ -38,7 +38,7 @@ class SearchPresenter: SearchPresentationLogic {
                                          trackName: track.trackName,
                                          collectionName: track.collectionName ?? "",
                                          artistName: track.artistName,
-                                         previewUrl: track.previewUrl)
+                                         previewUrl: track.previewUrl ?? "")
     }
   
 }
