@@ -12,6 +12,8 @@ import URLImage
 struct Library: View {
     
     @State var tracks = UserDefaults.standard.savedTracks()
+    @State private var showingAlert = false
+    @State private var track: SearchViewModel.Cell!
     
     var body: some View {
         
@@ -43,16 +45,36 @@ struct Library: View {
                 Divider().padding(.leading).padding(.trailing)
                 List {
                     ForEach(tracks) { track in
-                        LibraryCell(cell: track)
+                        LibraryCell(cell: track).gesture(LongPressGesture().onEnded({ _tracks in
+                            print("Pressed")
+                            self.track = track
+                            self.showingAlert = true
+                        }))
                     }.onDelete(perform: delete)
                 }
-            }
-            .navigationBarTitle("Library")
+            }.actionSheet(isPresented: $showingAlert, content: {
+                ActionSheet(title: Text("Are you sure you want to delet this track?"), buttons: [.destructive(Text("Delete"), action: {
+                    print("Deliting: \(self.track.trackName)")
+                    self.delete(track: self.track)
+                }), .cancel()
+                ])
+            })
+                .navigationBarTitle("Library")
         }
     }
     
     func delete(at offset: IndexSet) {
         tracks.remove(atOffsets: offset)
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        }
+    }
+    
+    func delete(track: SearchViewModel.Cell) {
+        let index = tracks.firstIndex(of: track)
+        guard let myIndex = index else { return }
+        tracks.remove(at: myIndex)
         if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
             let defaults = UserDefaults.standard
             defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
