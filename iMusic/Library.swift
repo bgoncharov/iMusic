@@ -15,6 +15,8 @@ struct Library: View {
     @State private var showingAlert = false
     @State private var track: SearchViewModel.Cell!
     
+    var tabBarDelegate: MainTabBarControllerDelegate?
+    
     var body: some View {
         
         NavigationView {
@@ -22,7 +24,8 @@ struct Library: View {
                 GeometryReader { geometry in
                     HStack(spacing: 20) {
                         Button(action: {
-                            print("1234")
+                            self.track = self.tracks[0]
+                            self.tabBarDelegate?.maximizeTrackDetailController(viewModel: self.track)
                         }, label:  {
                             Image(systemName: "play.fill")
                                 .frame(width: geometry.size.width / 2 - 10, height: 50)
@@ -31,7 +34,7 @@ struct Library: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            print("1234")
+                            self.tracks = UserDefaults.standard.savedTracks()
                         }, label:  {
                             Image(systemName: "arrow.2.circlepath")
                                 .frame(width: geometry.size.width / 2 - 10, height: 50)
@@ -45,10 +48,13 @@ struct Library: View {
                 Divider().padding(.leading).padding(.trailing)
                 List {
                     ForEach(tracks) { track in
-                        LibraryCell(cell: track).gesture(LongPressGesture().onEnded({ _tracks in
+                        LibraryCell(cell: track).gesture(LongPressGesture().onEnded { _ in
                             print("Pressed")
                             self.track = track
                             self.showingAlert = true
+                        }.simultaneously(with: TapGesture().onEnded { _ in
+                            self.track = track
+                            self.tabBarDelegate?.maximizeTrackDetailController(viewModel: self.track)
                         }))
                     }.onDelete(perform: delete)
                 }
