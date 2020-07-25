@@ -11,7 +11,7 @@ import URLImage
 
 struct Library: View {
     
-    var tracks = UserDefaults.standard.savedTracks()
+    @State var tracks = UserDefaults.standard.savedTracks()
     
     var body: some View {
         
@@ -41,15 +41,24 @@ struct Library: View {
                     
                 }.padding().frame(height: 50)
                 Divider().padding(.leading).padding(.trailing)
-                List(tracks) { track in
-                    LibraryCell(cell: track)
+                List {
+                    ForEach(tracks) { track in
+                        LibraryCell(cell: track)
+                    }.onDelete(perform: delete)
                 }
             }
             .navigationBarTitle("Library")
         }
     }
+    
+    func delete(at offset: IndexSet) {
+        tracks.remove(atOffsets: offset)
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        }
+    }
 }
-
 
 struct LibraryCell: View {
     
