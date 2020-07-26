@@ -4,5 +4,5 @@
 
 **Stack:** iTunes Search API, UIKit, SwiftUI, AVKit, URLImage, SDWebImage, Clean Swift(VIP).
 
-![Demo](https://github.com/bgoncharov/iMusic/blob/master/img/demo.gif)
+![Demo](https://github.com/bgoncharov/iMusic/blob/master/img/demo1.gif)
 ![Demo](https://github.com/bgoncharov/iMusic/blob/master/img/demo2.gif)
