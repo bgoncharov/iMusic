@@ -65,10 +65,40 @@ let player: AVPlayer = {
  }()
 ```
 
-`func awakeFromNib()` anstead of `func viewDidLoad()`, because TrackDetailView representation made with xib.
+`func awakeFromNib()` anstead of `func viewDidLoad()`, because `TrackDetailView` representation made with xib file.
 
 ```swift
 override func awakeFromNib() {
         super.awakeFromNib()
 }
 ```
+
+### Gestures
+
+```swift
+private func setupGestures() {
+        
+        miniTrackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapMaximized)))
+        miniTrackView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan)))
+        addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismissalPan)))
+ }
+```
+
+### Animation
+
+If you press play or pause you'll see that track image changes size with animation.
+
+```swift
+    private func enlargeTrackImageView() {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.trackImageView.transform = .identity
+        }, completion: nil)
+    }
+    
+    private func reduceTrackImageView() {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            let scale: CGFloat = 0.8
+            self.trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        }, completion: nil)
+    }
+ ```
