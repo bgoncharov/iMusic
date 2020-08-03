@@ -41,7 +41,7 @@ override func viewDidLoad() {
     }
  ```
  
-## UIKit and SwiftUI
+### UIKit and SwiftUI
 
 There are two main screens: `Search` and `Library`. Search screen made with `UIKit`, and Library made with `SwiftUI`. To make work them together in `func viewDidLoad()` of `MainTabBarController` (which is main controller for both views) I used `UIHostingController()`.
 
@@ -49,4 +49,26 @@ There are two main screens: `Search` and `Library`. Search screen made with `UIK
 var library = Library()
 library.tabBarDelegate = self
 let hostVC = UIHostingController(rootView: library)
+```
+
+## Player
+
+### TrackDetailView file
+
+Track player made with `AVKit`
+
+```swift
+let player: AVPlayer = {
+        let avPlayer = AVPlayer()
+        avPlayer.automaticallyWaitsToMinimizeStalling = false
+        return avPlayer
+ }()
+```
+
+`func awakeFromNib()` anstead of `func viewDidLoad()`, because TrackDetailView representation made with xib.
+
+```swift
+override func awakeFromNib() {
+        super.awakeFromNib()
+}
 ```
