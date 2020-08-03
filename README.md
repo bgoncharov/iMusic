@@ -13,7 +13,7 @@ Music application that uses iTunes Search API. Almost like Apple Music. Made wit
 - [Player using AVKit](https://github.com/bgoncharov/iMusic#trackdetailview-file)
   - [How gestures are working](https://github.com/bgoncharov/iMusic#trackdetailview-file)
   - [Working with animation](https://github.com/bgoncharov/iMusic#animation)
-  - [Images and SDWebImage Library]
+  - [Images and SDWebImage Library](https://github.com/bgoncharov/iMusic#images-and-sdwebimage-library)
 
 ## Setup application in code
 
