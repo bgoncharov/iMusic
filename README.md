@@ -7,6 +7,13 @@ Music application that uses iTunes Search API. Almost like Apple Music. Made wit
 ![Demo](https://github.com/bgoncharov/iMusic/blob/master/img/demo1.gif)
 ![Demo](https://github.com/bgoncharov/iMusic/blob/master/img/demo2.gif)
 
+## Сontents
+
+- [Setup application in code](https://github.com/bgoncharov/iMusic#setup-application-in-code)
+- [Player](https://github.com/bgoncharov/iMusic#trackdetailview-file)
+  - [How gestures are working](https://github.com/bgoncharov/iMusic#trackdetailview-file)
+  - [Working with animation](https://github.com/bgoncharov/iMusic#animation)
+
 ## Setup application in code
 
 ### SceneDelegate file
