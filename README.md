@@ -10,9 +10,10 @@ Music application that uses iTunes Search API. Almost like Apple Music. Made wit
 ## Сontents
 
 - [Setup application in code](https://github.com/bgoncharov/iMusic#setup-application-in-code)
-- [Player](https://github.com/bgoncharov/iMusic#trackdetailview-file)
+- [Player using AVKit](https://github.com/bgoncharov/iMusic#trackdetailview-file)
   - [How gestures are working](https://github.com/bgoncharov/iMusic#trackdetailview-file)
   - [Working with animation](https://github.com/bgoncharov/iMusic#animation)
+  - [Images and SDWebImage Library]
 
 ## Setup application in code
 
@@ -108,4 +109,13 @@ private func reduceTrackImageView() {
      self.trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
     }, completion: nil)
 }
+ ```
+ 
+ ### Images and SDWebImage Library
+ 
+ [SDWebImage](https://github.com/SDWebImage/SDWebImage) provides an async image downloader with cache support. 
+
+ ```swift
+ miniTrackImageView.sd_setImage(with: url, completed: nil)
+ trackImageView.sd_setImage(with: url, completed: nil)
  ```
