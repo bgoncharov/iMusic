@@ -17,17 +17,6 @@ Music application that uses iTunes Search API. Almost like Apple Music. Made wit
 
 ## Setup application in code
 
-### SceneDelegate file
-
-```swift
-func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        window = UIWindow(windowScene: windowScene)
-        window?.makeKeyAndVisible()
-        window?.rootViewController = MainTabBarController()
-    }
-```
 ### MainTabBarController file
 
 ```swift
